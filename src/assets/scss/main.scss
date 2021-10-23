@@ -1,0 +1,108 @@
+@import "variables";
+@import url('http://fonts.cdnfonts.com/css/gotham');
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  height: 100%;
+  font-family: var(--mfx-text-font);
+  background: var(--mfx-color-black);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*** overwrite a few bootstrap rules ***/
+.btn:focus, .btn:active, input:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn:hover {
+  color: var(--mfx-color-white);
+}
+
+/*** ***/
+
+.mfx-heading-1 {
+  color: var(--mfx-color-white);
+  font-family: var(--mfx-text-font-black);
+  font-size: var(--mfx-size-xl);
+  font-weight: var(--mfx-font-weight-bold);
+}
+
+.mfx-heading-2 {
+  color: var(--mfx-color-white);
+  font-family: var(--mfx-text-font-black);
+  font-size: var(--mfx-size-lg);
+  font-weight: var(--mfx-font-weight-bold);
+}
+
+.mfx-text-md {
+  color: var(--mfx-color-white);
+  font-family: var(--mfx-text-font-light);
+  font-size: var(--mfx-size-md);
+  font-weight: var(--mfx-font-weight-light);
+}
+
+.mfx-text-sm {
+  color: var(--mfx-color-white);
+  font-family: var(--mfx-text-font-light);
+  font-size: var(--mfx-size-sm);
+  font-weight: var(--mfx-font-weight-light);
+}
+
+.mfx-text-xs {
+  color: var(--mfx-color-grey);
+  font-family: var(--mfx-text-font-light);
+  font-size: var(--mfx-size-xs);
+  font-weight: var(--mfx-font-weight-light);
+}
+
+.mfx-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mfx-continer {
+  width: 100%;
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mfx-flex-grid {
+  display: grid;
+  grid-gap: 15px;
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @include media-breakpoint-between(lg, xl) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @include media-breakpoint-between(md, lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mfx-image-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mfx-link {
+  &:hover {
+    color: var(--mfx-color-red);
+  }
+}
+
