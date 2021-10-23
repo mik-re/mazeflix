@@ -30,5 +30,7 @@ to create another home page, but i kept anyway the version with the carousel (/h
 display in the dev tools logs for actions and mutations Redux style.
   ![mazeflix](docs/images/devtools.png)
 - At the top of the page I've added a section for categories. By clicking on one of them the page will be scrolled to the selected category section.
+- Loader is displayed while api call is performing
+- Error handling in the UI
 - Unit Test are not performed. Although I'm not new in Unit testing with Jest, testing in Vue it works a little different in Vue,
 since I'm quite new with Vue I could't set them up due to limited time. But off course I'm willing to catch up very fast in case of a successful interview.
