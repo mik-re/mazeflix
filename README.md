@@ -19,8 +19,8 @@ Packages I used:
 ### Remarks
 - The UI is inspired by Netflix website
 - I have two versions of the home page. Since the goal of the assignment was to display images preferably horizontal, 
-I did a first home page using Vue carousel. I wasn't quite happy with the performance of it, so I decided to
-to create another home page, but i kept anyway the version with the carousel (/home-v2)
+I did a first home page using Vue carousel. I wasn't quite happy with the performance of it, so I decided 
+to create another home page, but I kept anyway the version with the carousel (/home-v2)
 - The results are displayed on the page ordered by category and sorted by rating (highest to lowest).
 - It Is possible to perform a search with the search bar on the top right which navigates to /search route
 - From both home and search page it is possible to navigate to the detail page
