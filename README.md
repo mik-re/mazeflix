@@ -11,6 +11,12 @@ npm install
 npm run serve
 ```
 
+### Run test cases
+```
+npm run test
+```
+
+
 Packages I used:
 - Loadash debounce, for the search
 - Bootstrap for basic styles and icons(<b-icon>) available in the project
@@ -32,5 +38,7 @@ display in the dev tools logs for actions and mutations Redux style.
 - At the top of the page I've added a section for categories. By clicking on one of them the page will be scrolled to the selected category section.
 - Loader is displayed while api call is performing
 - Error handling in the UI
-- Unit Test are not performed. Although I'm not new in Unit testing with Jest, testing works a little bit different in Vue, and the guide is not exhaustive, especially for configurations.
-Therefore, since I'm quite new with Vue, I needed a little bit of time more. But off course I'm willing to catch up very fast in case of a successful interview.
+
+### Missings due expired time
+- Not all test cases are performed 
+- Could have improved a little bit the user experience of the home dashboard by adding a scroll up button on the bottom of the page

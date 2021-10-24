@@ -8,9 +8,9 @@
     </div>
     <div class="row">
       <mfx-error-message v-if="error" />
-      <div v-if="searchShowResult">
+      <div v-if="searchShowResult" data-mfx="search-results">
         <div class="col-12 mb-4" v-if="searchShowResult.length === 0">
-          <p class='mfx-text-md'>The search has not produced results. Try Again!!</p>
+          <p class='mfx-text-md' data-mfx="no-results">The search has not produced results. Try Again!!</p>
         </div>
         <div class="mfx-flex-grid">
           <mfx-movie-card

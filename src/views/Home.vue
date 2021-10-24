@@ -2,17 +2,17 @@
   <div class="mfx-continer">
     <mfx-error-message v-if="error"/>
     <mfx-loader v-if="isSubmitting"/>
-    <div v-if="shows">
+    <div v-if="shows" data-mfx="shows-home">
       <div class="categories-section">
         <mfx-categories :categories="categories"></mfx-categories>
       </div>
 
-      <div v-for="(results, category) in shows"
-           :key="category"
+      <div v-for="(results, genre) in shows"
+           :key="genre"
            class="genre-section"
       >
-        <div :id="category">
-          <h2 class="mfx-heading-2 title" >{{ category }}</h2>
+        <div :id="genre">
+          <h2 class="mfx-heading-2 title" data-mfx="shows-genre">{{ genre }}</h2>
         </div>
         <div class="mfx-flex-grid">
           <mfx-movie-card

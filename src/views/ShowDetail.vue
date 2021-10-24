@@ -4,33 +4,32 @@
     <mfx-error-message v-if="error" />
     <div class="row">
       <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-8 offset-xl-2">
-        <div class="detail" v-if="show">
+        <div class="detail" v-if="show" data-mfx="show-detail">
           <div class="row">
             <div class="col-xl-6 col-12">
               <div class="image-wrapper">
                 <div class="background-layer"></div>
-                <img class="mfx-image-fit" :src="show.image.original" alt="" v-if="show.image">
-                <img class="mfx-image-fit" src="https://dummyimage.com/325x478/" alt="" v-else>
+                <img class="mfx-image-fit" :src="show.image.original" alt="" v-if="show.image"  data-mfx="show-image">
+                <img class="mfx-image-fit" src="https://dummyimage.com/325x478/" alt="" v-else data-mfx="show-image-fallback">
               </div>
             </div>
             <div class="col-xl-6 col-12">
               <div class="details-info-wrapper">
                 <div class="info">
-                  <h2 class="mfx-heading-2">{{show.name}}</h2>
-                  <p class="mfx-text-md">{{summary}}</p>
+                  <h2 class="mfx-heading-2" data-mfx="show-name">{{show.name}}</h2>
+                  <p class="mfx-text-md" data-mfx="show-summary">{{summary}}</p>
                   <span class="mfx-text-xs">genres:</span>
-                  <span class="mfx-text-sm">&nbsp;{{genres}}</span>
+                  <span class="mfx-text-sm" data-mfx="show-genres">&nbsp;{{genres}}</span>
                   <br />
                   <div v-if="show.rating">
                     <span class="mfx-text-xs">rating:</span>
-                    <span class="mfx-text-sm">&nbsp;{{show.rating.average}}</span>
+                    <span class="mfx-text-sm" data-mfx="show-rating">&nbsp;{{show.rating.average}}</span>
                   </div>
 
                   <div v-if="show.language">
                     <span class="mfx-text-xs">language:</span>
-                    <span class="mfx-text-sm">&nbsp;{{show.language}}</span>
+                    <span class="mfx-text-sm" data-mfx="show-language">&nbsp;{{show.language}}</span>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -59,7 +58,7 @@ export default {
   },
   beforeDestroy() {
     // we need to set the current show to null,
-    //becouse while routing back again to this view,
+    //because while routing back again to this view,
     //the previus show will be visible in the meantime the service gives us the response
     this.getShowByIdReset()
   },
@@ -84,7 +83,6 @@ export default {
       return this.show.summary
           ? this.show.summary.replace(/<[^>]*>?/gm, '')
           : 'no description available'
-
     }
   },
 }

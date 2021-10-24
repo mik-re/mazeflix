@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div class="error-message">
     <h2 class="mfx-heading-2">{{ message }}</h2>
-
   </div>
 </template>
 

@@ -42,7 +42,7 @@ export default {
   watch: {
     searchQuery: {
       handler: debounce(function (query) {
-        if (query === '') {
+        if (query.trim() === '') {
           this.finishSearch()
           return;
         }
